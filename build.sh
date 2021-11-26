@@ -6,14 +6,14 @@ apt-get install unzip p7zip-full curl python2 binutils-aarch64-linux-gnu wget bi
 git clone --depth=1 https://github.com/kdrag0n/proton-clang clang
 
 # Clone AnyKernel3
-git clone --depth=1 https://github.com/diyanto823/AnyKernel3 -b ginkgo
+git clone --depth=1 https://github.com/diyanto823/AnyKernel3.git -b ginkgo
 
 # Export
-export KBUILD_BUILD_HOST=Alk
+export KBUILD_BUILD_HOST=Ayy
 export KBUILD_BUILD_USER="Diyanto"
 
 # Build
-make O=out ARCH=arm64 vendor/ginkgo-perf_defconfig
+make O=out ARCH=arm64 vendor/lavender-perf_defconfig
 PATH="${PWD}/clang/bin:$PATH"
 make -j$(nproc --all) O=out ARCH=arm64 \
                       CC=clang \
